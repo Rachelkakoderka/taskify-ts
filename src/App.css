@@ -70,3 +70,11 @@ body {
 .input__submit:hover {
   background-color: #454c5a;
 }
+
+.todoList {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  flex-wrap: wrap;
+}
+

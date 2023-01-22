@@ -29,9 +29,10 @@ console.log(allTasks)
         setTask={setTask}
         handleAdd={handleAdd} />
 
-      {/* <TodoList />   */}
-
-      {allTasks.map((t) => (<li>{t.text}</li>) )}
+      <TodoList 
+        allTasks={allTasks} 
+        setAllTasks={setAllTasks}/>  
+      
     </div>
   );
 }
