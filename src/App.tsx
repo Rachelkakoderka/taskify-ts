@@ -19,8 +19,6 @@ const handleAdd = (e: React.FormEvent) => {
  
 }
 
-console.log(allTasks)
-
   return (
     <div className="App">
       <span className='heading'>Taskify</span>

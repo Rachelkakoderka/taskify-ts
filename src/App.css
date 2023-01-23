@@ -73,15 +73,18 @@ body {
 
 .todoList {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   width: 90%;
   flex-wrap: wrap;
 }
 
 .card {
   display: flex;
-  width: 29.5%;
-  border-radius: 5px;
+  flex-direction: column;
+  width: 50%;
+  border-radius: 10px;
   padding: 20px;
   margin-top: 15px;
   color: #282c34;
@@ -94,9 +97,13 @@ body {
   border: none;
   font-size: 20px;
 }
-.card__text :focus {
+.card__text:focus {
   outline: none;
 }
+
+/* .done {
+  background-color: rgb(231, 169, 35);
+} */
 
 .icon {
   margin-left: 10px;
@@ -119,6 +126,6 @@ body {
 
 @media(max-width: 1200px) {
     .todoList {
-      width: 40%;
+      width: 60%;
     }
 }
