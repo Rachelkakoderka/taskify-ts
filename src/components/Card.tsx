@@ -22,9 +22,13 @@ const Card : React.FC<Props>= ({task, key, allTasks, setAllTasks}) => {
   }
 
   const handleDelete = (id: number) => {
+    if (edit) {
+
+    } else {
     setAllTasks(
         allTasks.filter((task)=> task.id === id ? false : true)
     )
+  }
   }
 
   const updateAfterEdit = (id:number) => {
@@ -70,8 +74,11 @@ const Card : React.FC<Props>= ({task, key, allTasks, setAllTasks}) => {
             )
         
             
-        }        
+        }   
+        
+        { edit ? "" :     
         <div>
+            
             <span className="icon" onClick ={ () => {
                 if (!task.isDone && !edit ) {
                     setEdit(!edit);
@@ -87,7 +94,7 @@ const Card : React.FC<Props>= ({task, key, allTasks, setAllTasks}) => {
             <span className="icon" onClick={()=> handleDone(task.id)}>
                 <MdDone />
             </span>
-        </div>
+        </div>}
     </form>
   )
 }
